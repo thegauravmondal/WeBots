@@ -1,0 +1,342 @@
+#VRML_SIM R2023b utf8
+
+# Red-ball search challenge - "gallery" arena
+# Arena interior: 4 m x 4 m (x: -2..2, y: -2..2, z up).
+
+WorldInfo {
+  basicTimeStep 32
+  coordinateSystem "ENU"
+  contactProperties [
+    ContactProperties { material1 "caster" material2 "default" coulombFriction [ 0 ] }
+  ]
+}
+Viewpoint {
+  orientation -0.4486 0.4486 0.7730 1.8255
+  position 0 -3.2 5.6
+}
+Background { skyColor [ 0.16 0.20 0.28 ] }
+DirectionalLight {
+  ambientIntensity 0.9
+  direction -0.4 -0.5 -1
+  intensity 1.2
+  castShadows TRUE
+}
+PointLight {
+  attenuation 1 0 0
+  intensity 0.7
+  location 0 0 2.8
+  radius 12
+}
+
+
+Solid {
+  translation 0 0 -0.04
+  children [ Shape { appearance DEF GROUND PBRAppearance { baseColor 0.06 0.07 0.09 roughness 1.0 metalness 0.0 } geometry Box { size 14 14 0.04 } } ]
+  name "ground"
+}
+
+Solid {
+  translation 0 0 -0.01
+  children [
+    Shape { appearance DEF MARBLE PBRAppearance { baseColor 0.88 0.87 0.83 roughness 0.25 metalness 0.0 } geometry Box { size 4.2 4.2 0.02 } }
+    Transform {
+      translation 0 0 0.01
+      children [
+      Transform { translation -1.75 -1.75 0.001 children [ Shape { appearance DEF SLATE PBRAppearance { baseColor 0.15 0.19 0.25 roughness 0.35 metalness 0.0 } geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -1.75 -0.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -1.75 0.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -1.75 1.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -1.25 -1.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -1.25 -0.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -1.25 0.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -1.25 1.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -0.75 -1.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -0.75 -0.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -0.75 0.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -0.75 1.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -0.25 -1.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -0.25 -0.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -0.25 0.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation -0.25 1.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 0.25 -1.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 0.25 -0.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 0.25 0.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 0.25 1.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 0.75 -1.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 0.75 -0.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 0.75 0.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 0.75 1.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 1.25 -1.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 1.25 -0.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 1.25 0.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 1.25 1.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 1.75 -1.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 1.75 -0.25 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 1.75 0.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      Transform { translation 1.75 1.75 0.001 children [ Shape { appearance USE SLATE geometry Box { size 0.496 0.496 0.002 } } ] }
+      ]
+    }
+  ]
+  name "floor"
+  boundingObject Box { size 4.2 4.2 0.02 }
+}
+
+Solid {
+  translation 0 2.04 0.150
+  children [
+    Shape { appearance DEF NAVY PBRAppearance { baseColor 0.09 0.12 0.19 roughness 0.55 metalness 0.0 } geometry Box { size 4.16 0.08 0.3 } }
+    Transform { translation 0 0 0.1560 children [ Shape { appearance DEF BRASS PBRAppearance { baseColor 0.8 0.62 0.22 roughness 0.3 metalness 0.9 } geometry Box { size 4.180 0.100 0.012 } } ] }
+  ]
+  name "wall_north"
+  boundingObject Box { size 4.16 0.08 0.3 }
+}
+
+Solid {
+  translation 0 -2.04 0.150
+  children [
+    Shape { appearance USE NAVY geometry Box { size 4.16 0.08 0.3 } }
+    Transform { translation 0 0 0.1560 children [ Shape { appearance USE BRASS geometry Box { size 4.180 0.100 0.012 } } ] }
+  ]
+  name "wall_south"
+  boundingObject Box { size 4.16 0.08 0.3 }
+}
+
+Solid {
+  translation 2.04 0 0.150
+  children [
+    Shape { appearance USE NAVY geometry Box { size 0.08 4.16 0.3 } }
+    Transform { translation 0 0 0.1560 children [ Shape { appearance USE BRASS geometry Box { size 0.100 4.180 0.012 } } ] }
+  ]
+  name "wall_east"
+  boundingObject Box { size 0.08 4.16 0.3 }
+}
+
+Solid {
+  translation -2.04 0 0.150
+  children [
+    Shape { appearance USE NAVY geometry Box { size 0.08 4.16 0.3 } }
+    Transform { translation 0 0 0.1560 children [ Shape { appearance USE BRASS geometry Box { size 0.100 4.180 0.012 } } ] }
+  ]
+  name "wall_west"
+  boundingObject Box { size 0.08 4.16 0.3 }
+}
+
+Solid {
+  translation 2.06 2.06 0.18
+  children [ Shape { appearance USE BRASS geometry Box { size 0.12 0.12 0.36 } } ]
+  name "post_ne"
+}
+
+Solid {
+  translation -2.06 2.06 0.18
+  children [ Shape { appearance USE BRASS geometry Box { size 0.12 0.12 0.36 } } ]
+  name "post_nw"
+}
+
+Solid {
+  translation 2.06 -2.06 0.18
+  children [ Shape { appearance USE BRASS geometry Box { size 0.12 0.12 0.36 } } ]
+  name "post_se"
+}
+
+Solid {
+  translation -2.06 -2.06 0.18
+  children [ Shape { appearance USE BRASS geometry Box { size 0.12 0.12 0.36 } } ]
+  name "post_sw"
+}
+
+Solid {
+  translation -1.1 0.9 0.150
+  children [
+    Shape { appearance DEF IVORY PBRAppearance { baseColor 0.93 0.92 0.88 roughness 0.7 metalness 0.0 } geometry Box { size 1.8 0.08 0.3 } }
+    Transform { translation 0 0 0.1560 children [ Shape { appearance USE BRASS geometry Box { size 1.820 0.100 0.012 } } ] }
+  ]
+  name "divider_west"
+  boundingObject Box { size 1.8 0.08 0.3 }
+}
+
+Solid {
+  translation 1.1 0.9 0.150
+  children [
+    Shape { appearance USE IVORY geometry Box { size 1.8 0.08 0.3 } }
+    Transform { translation 0 0 0.1560 children [ Shape { appearance USE BRASS geometry Box { size 1.820 0.100 0.012 } } ] }
+  ]
+  name "divider_east"
+  boundingObject Box { size 1.8 0.08 0.3 }
+}
+
+Solid {
+  translation -0.9 1.7 0.150
+  children [
+    Shape { appearance USE IVORY geometry Box { size 0.08 0.6 0.3 } }
+    Transform { translation 0 0 0.1560 children [ Shape { appearance USE BRASS geometry Box { size 0.100 0.620 0.012 } } ] }
+  ]
+  name "pocket_wall"
+  boundingObject Box { size 0.08 0.6 0.3 }
+}
+
+Solid {
+  translation -1.0 -1.1 0.150
+  children [
+    Shape { appearance DEF TEAL PBRAppearance { baseColor 0.08 0.45 0.5 roughness 0.45 metalness 0.0 } geometry Box { size 0.08 1.0 0.3 } }
+    Transform { translation 0 0 0.1560 children [ Shape { appearance USE BRASS geometry Box { size 0.100 1.020 0.012 } } ] }
+  ]
+  name "barrier_left"
+  boundingObject Box { size 0.08 1.0 0.3 }
+}
+
+Solid {
+  translation 1.0 -0.8 0.150
+  children [
+    Shape { appearance USE TEAL geometry Box { size 0.08 1.2 0.3 } }
+    Transform { translation 0 0 0.1560 children [ Shape { appearance USE BRASS geometry Box { size 0.100 1.220 0.012 } } ] }
+  ]
+  name "barrier_right"
+  boundingObject Box { size 0.08 1.2 0.3 }
+}
+
+Solid {
+  translation 0 -1.2 0.150
+  children [
+    Shape { appearance USE TEAL geometry Box { size 0.8 0.08 0.3 } }
+    Transform { translation 0 0 0.1560 children [ Shape { appearance USE BRASS geometry Box { size 0.820 0.100 0.012 } } ] }
+  ]
+  name "barrier_low"
+  boundingObject Box { size 0.8 0.08 0.3 }
+}
+
+Solid {
+  translation 0 0 0.150
+  children [
+    Shape { appearance DEF CHAR PBRAppearance { baseColor 0.1 0.1 0.12 roughness 0.5 metalness 0.0 } geometry Box { size 0.6 0.6 0.3 } }
+    Transform { translation 0 0 0.1560 children [ Shape { appearance USE BRASS geometry Box { size 0.620 0.620 0.012 } } ] }
+  ]
+  name "central_block"
+  boundingObject Box { size 0.6 0.6 0.3 }
+}
+
+Solid {
+  translation -1.5 1.6 0.003
+  children [ Shape { appearance USE BRASS geometry Box { size 0.22 0.22 0.006 } } ]
+  name "ball_plinth"
+}
+DEF TARGET_BALL Solid {
+  translation -1.5 1.6 0.066
+  children [ Shape { appearance DEF BALL PBRAppearance { baseColor 1.0 0.0 0.0 roughness 0.45 metalness 0.0 } geometry Sphere { radius 0.06 subdivision 3 } } ]
+  name "target_ball"
+}
+
+DEF ROBOT Robot {
+  translation 1.6 -1.6 0
+  rotation 0 0 1 3.14159
+  supervisor TRUE
+  children [
+    Transform {
+      translation 0 0 0.065
+      children [ Shape { appearance DEF PEARL PBRAppearance { baseColor 0.92 0.93 0.95 roughness 0.4 metalness 0.0 } geometry Box { size 0.2 0.12 0.06 } } ]
+    }
+    Transform {
+      translation 0 0 0.097
+      children [ Shape { appearance USE TEAL geometry Box { size 0.16 0.1 0.006 } } ]
+    }
+    Camera {
+      translation 0.1 0 0.09
+      name "camera"
+      width 64
+      height 48
+      fieldOfView 1.2
+    }
+    Lidar {
+      translation 0.06 0 0.11
+      name "lidar"
+      children [
+        Transform {
+          translation 0 0 -0.01
+          children [ Shape { appearance USE CHAR geometry Box { size 0.04 0.04 0.03 } } ]
+        }
+      ]
+      horizontalResolution 180
+      fieldOfView 3.14159
+      numberOfLayers 1
+      verticalFieldOfView 0.05
+      minRange 0.05
+      maxRange 2.5
+    }
+    Transform {
+      translation 0.08 0 0.02
+      children [ Shape { appearance USE CHAR geometry Sphere { radius 0.02 } } ]
+    }
+    Transform {
+      translation -0.08 0 0.02
+      children [ Shape { appearance USE CHAR geometry Sphere { radius 0.02 } } ]
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters { axis 0 1 0 anchor 0 0.08 0.04 }
+      device [
+        RotationalMotor { name "left wheel motor" maxVelocity 15 }
+        PositionSensor { name "left wheel sensor" }
+      ]
+      endPoint Solid {
+        translation 0 0.08 0.04
+        children [
+          Transform {
+            rotation 1 0 0 1.5708
+            children [ Shape { appearance DEF RUBBER PBRAppearance { baseColor 0.05 0.05 0.05 roughness 1.0 metalness 0.0 } geometry Cylinder { height 0.02 radius 0.04 } } ]
+          }
+        ]
+        name "left wheel"
+        boundingObject Transform {
+          rotation 1 0 0 1.5708
+          children [ Cylinder { height 0.02 radius 0.04 } ]
+        }
+        physics Physics { density -1 mass 0.15 }
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters { axis 0 1 0 anchor 0 -0.08 0.04 }
+      device [
+        RotationalMotor { name "right wheel motor" maxVelocity 15 }
+        PositionSensor { name "right wheel sensor" }
+      ]
+      endPoint Solid {
+        translation 0 -0.08 0.04
+        children [
+          Transform {
+            rotation 1 0 0 1.5708
+            children [ Shape { appearance USE RUBBER geometry Cylinder { height 0.02 radius 0.04 } } ]
+          }
+        ]
+        name "right wheel"
+        boundingObject Transform {
+          rotation 1 0 0 1.5708
+          children [ Cylinder { height 0.02 radius 0.04 } ]
+        }
+        physics Physics { density -1 mass 0.15 }
+      }
+    }
+  ]
+  name "search_robot"
+  contactMaterial "caster"
+  boundingObject Group {
+    children [
+      Transform {
+        translation 0 0 0.065
+        children [ Box { size 0.2 0.12 0.06 } ]
+      }
+      Transform {
+        translation 0.08 0 0.02
+        children [ Sphere { radius 0.02 } ]
+      }
+      Transform {
+        translation -0.08 0 0.02
+        children [ Sphere { radius 0.02 } ]
+      }
+    ]
+  }
+  physics Physics {
+    density -1
+    mass 1.0
+    centerOfMass [ 0 0 0.04 ]
+  }
+  controller "search_robot"
+}
